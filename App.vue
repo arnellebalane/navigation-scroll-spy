@@ -159,6 +159,7 @@
         top: 0;
         left: 0;
         right: 0;
+        z-index: 1;
         padding: 8px 10vw;
         border-bottom: 1px solid #eee;
         background-color: #fff;
