@@ -5,6 +5,8 @@ Project is bundled using [Parcel][3].
 
 [See live demo][4].
 
+![demo](demo.gif)
+
 ```bash
 $ git clone https://github.com/arnellebalane/navigation-scroll-spy
 $ cd navigation-scroll-spy
