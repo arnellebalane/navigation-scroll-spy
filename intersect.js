@@ -1,3 +1,5 @@
+import 'intersection-observer';
+
 const callbacks = new Map();
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
