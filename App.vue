@@ -2,7 +2,7 @@
     <div class="app" id="app">
         <div class="wrapper">
             <aside>
-                <nav>
+                <nav ref="nav">
                     <a href="#section-one" :class="navLinkClass('section-one')">Section One</a>
                     <a href="#section-two" :class="navLinkClass('section-two')">Section Two</a>
                     <a href="#section-three" :class="navLinkClass('section-three')">Section Three</a>
@@ -94,6 +94,8 @@
 </template>
 
 <script>
+    import stickyfill from 'stickyfilljs';
+
     export default {
         name: 'App',
 
@@ -107,6 +109,10 @@
             highlighted() {
                 return this.visibleSections[0];
             }
+        },
+
+        mounted() {
+            stickyfill.add(this.$refs.nav);
         },
 
         methods: {
@@ -149,6 +155,7 @@
     }
 
     nav {
+        position: -webkit-sticky;
         position: sticky;
         top: calc(10em + 50px);
         margin-top: 10em;
