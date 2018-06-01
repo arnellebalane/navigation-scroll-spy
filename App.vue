@@ -16,6 +16,9 @@
 
             <main ref="container">
                 <h1>Navigation Scroll Spy</h1>
+                <a href="https://github.com/arnellebalane/navigation-scroll-spy" target="_blank" rel="noopener noreferrer">
+                    github.com/arnellebalane/navigation-scroll-spy
+                </a>
 
                 <section id="section-one" v-intersect="onIntersect">
                     <h1>Section One</h1>
