@@ -3,14 +3,14 @@
         <div class="wrapper">
             <aside>
                 <nav ref="nav">
-                    <a href="#section-one" :class="navLinkClass('section-one')">Section One</a>
-                    <a href="#section-two" :class="navLinkClass('section-two')">Section Two</a>
-                    <a href="#section-three" :class="navLinkClass('section-three')">Section Three</a>
-                    <a href="#section-four" :class="navLinkClass('section-four')">Section Four</a>
-                    <a href="#section-five" :class="navLinkClass('section-five')">Section Five</a>
-                    <a href="#section-six" :class="navLinkClass('section-six')">Section Six</a>
-                    <a href="#section-seven" :class="navLinkClass('section-seven')">Section Seven</a>
-                    <a href="#section-eight" :class="navLinkClass('section-eight')">Section Eight</a>
+                    <a href="#section-one" data-label="1" :class="navLinkClass('section-one')">Section One</a>
+                    <a href="#section-two" data-label="2" :class="navLinkClass('section-two')">Section Two</a>
+                    <a href="#section-three" data-label="3" :class="navLinkClass('section-three')">Section Three</a>
+                    <a href="#section-four" data-label="4" :class="navLinkClass('section-four')">Section Four</a>
+                    <a href="#section-five" data-label="5" :class="navLinkClass('section-five')">Section Five</a>
+                    <a href="#section-six" data-label="6" :class="navLinkClass('section-six')">Section Six</a>
+                    <a href="#section-seven" data-label="7" :class="navLinkClass('section-seven')">Section Seven</a>
+                    <a href="#section-eight" data-label="8" :class="navLinkClass('section-eight')">Section Eight</a>
                 </nav>
             </aside>
 
@@ -142,32 +142,88 @@
 
 <style scoped>
     .wrapper {
-        display: flex;
-        width: 90vw;
+        width: 100%;
         max-width: 800px;
         margin: 0 auto;
     }
 
+    @media all and (min-width: 600px) {
+        .wrapper {
+            display: flex;
+            width: 90vw;
+        }
+    }
+
     aside {
-        flex-shrink: 0;
-        padding: 50px 0;
-        margin-right: 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 8px 10vw;
+        border-bottom: 1px solid #eee;
+        background-color: #fff;
+    }
+
+    @media all and (min-width: 600px) {
+        aside {
+            flex-shrink: 0;
+            position: unset;
+            padding: 50px 0;
+            border-bottom: unset;
+            margin-right: 30px;
+        }
     }
 
     nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
         position: -webkit-sticky;
         position: sticky;
-        top: calc(10em + 50px);
-        margin-top: 10em;
+        top: 0;
+    }
+
+    @media all and (min-width: 600px) {
+        nav {
+            display: block;
+            margin-top: 10em;
+            top: calc(10em + 50px);
+        }
     }
 
     nav a {
         display: block;
-        padding: 8px 16px;
-        font-size: 14px;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        font-size: 0;
+        text-align: center;
         text-transform: uppercase;
         text-decoration: none;
         color: #888;
+    }
+
+    nav a::before {
+        content: attr(data-label);
+        font-size: 14px;
+        text-align: center;
+        line-height: 2rem;
+    }
+
+    @media all and (min-width: 600px) {
+        nav a {
+            width: unset;
+            height: unset;
+            border-radius: unset;
+            padding: 8px 16px;
+            font-size: 14px;
+            text-align: unset;
+        }
+
+        nav a::before {
+            display: none;
+        }
     }
 
     nav a:hover,
@@ -181,9 +237,16 @@
     }
 
     main {
-        flex-grow: 1;
-        padding: 50px;
-        padding-right: 0;
+        padding: 10px 10vw;
+        padding-top: 48px;
+    }
+
+    @media all and (min-width: 600px) {
+        main {
+            flex-grow: 1;
+            padding: 50px;
+            padding-right: 0;
+        }
     }
 
     section {
