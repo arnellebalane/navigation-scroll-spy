@@ -111,6 +111,13 @@
             }
         },
 
+        watch: {
+            highlighted(value) {
+                const label = value.querySelector('h1').textContent;
+                document.title = label;
+            }
+        },
+
         mounted() {
             stickyfill.add(this.$refs.nav);
         },
