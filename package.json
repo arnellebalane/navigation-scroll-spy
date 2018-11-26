@@ -49,6 +49,9 @@
     },
     "env": {
       "browser": true
+    },
+    "rules": {
+      "unicorn/filename-case": "off"
     }
   }
 }
