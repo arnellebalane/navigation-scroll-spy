@@ -4,7 +4,9 @@
   "description": "Navigation scroll spy implementation using the Intersection Observer API and VueJS",
   "main": "index.js",
   "scripts": {
+    "clean": "rm -rf build",
     "start": "parcel index.html --out-dir build --port 5000",
+    "prebuild": "rm -rf build",
     "build": "parcel build index.html --out-dir build",
     "lint:js": "eslint *.{js,vue}",
     "lint:css": "stylelint *.{css,vue}",
