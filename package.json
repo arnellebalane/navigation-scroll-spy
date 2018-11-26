@@ -26,6 +26,7 @@
   "dependencies": {
     "@arnellebalane/vue-intersect": "2.0.0",
     "stickyfilljs": "2.1.0",
-    "vue": "2.5.17"
+    "vue": "2.5.17",
+    "vue-hot-reload-api": "2.3.1"
   }
 }
