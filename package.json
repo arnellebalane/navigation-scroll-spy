@@ -6,7 +6,8 @@
   "scripts": {
     "start": "parcel index.html --out-dir build --port 5000",
     "build": "parcel build index.html --out-dir build",
-    "lint": "eslint *.{js,vue}"
+    "lint:js": "eslint *.{js,vue}",
+    "lint:css": "stylelint *.{css,vue}"
   },
   "keywords": [],
   "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com/)",
@@ -26,6 +27,8 @@
     "eslint-plugin-unicorn": "6.0.1",
     "eslint-plugin-vue": "5.0.0-beta.5",
     "parcel-bundler": "1.10.3",
+    "stylelint": "9.8.0",
+    "stylelint-config-arnellebalane": "1.1.0",
     "vue-template-compiler": "2.5.17"
   },
   "dependencies": {
@@ -53,5 +56,10 @@
     "rules": {
       "unicorn/filename-case": "off"
     }
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-arnellebalane"
+    ]
   }
 }
