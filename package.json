@@ -1,7 +1,7 @@
 {
   "name": "navigation-scroll-spy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Navigation scroll spy implementation using the Intersection Observer API and VueJS",
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html --out-dir build --port 5000",
@@ -9,6 +9,14 @@
   },
   "keywords": [],
   "author": "Arnelle Balane <arnellebalane@gmail.com> (https://arnellebalane.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnellebalane/navigation-scroll-spy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arnellebalane/navigation-scroll-spy/issues"
+  },
+  "homepage": "https://github.com/arnellebalane/navigation-scroll-spy#readme",
   "license": "MIT",
   "devDependencies": {
     "@vue/component-compiler-utils": "2.3.0",
