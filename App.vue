@@ -265,8 +265,8 @@ aside {
     right: 0;
     z-index: 1;
     padding: 8px 10vw;
-    border-bottom: 1px solid #eee;
-    background-color: #fff;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #ffffff;
 }
 
 @media all and (min-width: 600px) {
@@ -283,8 +283,6 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
@@ -306,7 +304,7 @@ nav a {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
-    color: #888;
+    color: #888888;
 }
 
 nav a::before {
@@ -333,11 +331,11 @@ nav a::before {
 
 nav a:hover,
 nav a:focus {
-    color: #000;
+    color: #000000;
 }
 
 nav a.highlight {
-    color: #000;
+    color: #000000;
     background-color: #ffeb3b;
 }
 
